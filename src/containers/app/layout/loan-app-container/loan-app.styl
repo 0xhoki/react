@@ -1,0 +1,107 @@
+class = loan-app
+
+.{class} {
+  max-width 864px;
+  margin: 0 auto;
+
+  &__header {
+    color: #252963;
+    text-align center;
+    margin-bottom 40px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+  }
+
+  &__status {
+    display table;
+    margin-bottom 60px;
+  }
+  &__status-row {
+    display table-row;
+  }
+  &__status-cell {
+    display table-cell;
+    font-size 16px;
+    padding: 6px;
+    color: #5e626f;
+  }
+  &__dark-blue {
+    color: #252963;
+    font-weight bold;
+    font-size inherit;
+  }
+  &__group {
+    margin-bottom 60px
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__upload-group {
+    display table;
+    width 100%;
+    margin-bottom: 60px;
+  }
+  &__progress {
+    text-align center;
+    margin-bottom 60px;
+  }
+
+  &__text {
+    font-size 16px;
+    margin-bottom 60px;
+    color: #5e626f;
+  }
+  &__btn {
+    color: white;
+    font-weight: bold;
+    width 200px;
+    background-color: #252963;
+    float: left;
+    padding: 12px 16px;
+    text-align center;
+    border-radius 3px;
+
+    i {
+      margin-right: 12px;
+    }
+    &--danger {
+      float: right;
+      background-color: red;
+    }
+  }
+
+  &--mobile {
+    max-width initial;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .{class}__header {
+      margin-top: 40px;
+    }
+
+    .{class}__status-cell{
+      font-size: 12px;
+    }
+
+    .{class}__btn{
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .{class}__group{
+      margin-bottom: 20px;
+    }
+
+    .{class}__text{
+      margin-bottom 20px;
+    }
+
+    .{class}__upload-group {
+      margin-bottom: 26px;
+    }
+  }
+}

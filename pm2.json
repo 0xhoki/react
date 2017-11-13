@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "kitdan-ui-uat",
+      "script": "./tools/build.js",
+      "watch": false,
+      "exec_interpreter": "node_modules/babel-cli/bin/babel-node",
+      "env": {
+        "API_HOST": "http://front-dev.magora.team:33015"
+      }
+    }
+  ]
+}

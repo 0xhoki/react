@@ -1,0 +1,45 @@
+class = profile-header-mobile
+
+.{class} {
+  height 80px;
+  margin-bottom 20px;
+
+  &:before{
+    display inline-block;
+    vertical-align middle;
+    height: 100%;
+    content: ""
+    width: 0
+  }
+
+  &__btn {
+    display inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 60px;
+    font-size 26px;
+    color: #232762;
+    cursor: pointer;
+    text-align center;
+
+    i {
+      vertical-align: middle;
+    }
+  }
+
+  &__logo {
+    div {
+      display inline-block;
+      vertical-align middle;
+      color: #232762;
+      font-size 22px;
+      font-weight bold;
+    }
+
+    img {
+      display inline-block;
+      vertical-align middle;
+      margin-right: 6px;
+    }
+  }
+}

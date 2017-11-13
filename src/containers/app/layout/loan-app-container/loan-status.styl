@@ -1,0 +1,48 @@
+class = loan-status
+
+$point-diameter = 20px;
+
+.{class} {
+  width: calc(100% - 140px);
+  display table;
+  margin: 0 auto;
+
+  &__point {
+    border-top: 4px solid #d4d4d4;
+    color: #5e626f;
+    position relative;
+    display table-cell;
+    height: 50px;
+    vertical-align: bottom;
+
+    &:before {
+      content: '';
+      border-radius: 50%;
+      background-color: #d4d4d4;
+      position: absolute;
+      width $point-diameter;
+      height $point-diameter;
+      left: "calc(50% - %s)" % ($point-diameter / 2);
+      top: -($point-diameter / 2 + 2px) //2px progress line border
+    }
+
+    &--done {
+      border-top: 4px solid #252963;
+      &:before {
+        background-color: #252963;
+      }
+    }
+  }
+
+  &__label {
+
+  }
+
+  &--mobile {
+    width: 100%;
+    .{class}__point{
+      font-size: 9px;
+      height: 40px;
+    }
+  }
+}

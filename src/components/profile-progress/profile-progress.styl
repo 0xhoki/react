@@ -1,0 +1,57 @@
+class = profile-progress
+
+.{class} {
+  width: 165px;
+  text-align left;
+
+  &__text {
+    color: #5e626f;
+    margin-bottom: 10px;
+    width 100%;
+    font-style italic;
+    font-size: 14px;
+  }
+
+  &__line {
+    background-color #dddddd;
+    height 3px;
+    width 100%;
+    position relative;
+    overflow hidden;
+  }
+
+  &__line-inner {
+    background-color #41bc2f;
+    width: 0;
+    transition: width 160ms linear;
+    height 100%;
+    position absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.{class}-wrapper {
+  height: 100px;
+  width: 100%;
+  text-align: right;
+
+  &:before {
+    display inline-block;
+    vertical-align middle;
+    height: 100%;
+    content: ""
+    width: 0
+  }
+
+  .{class} {
+    display inline-block;
+  }
+}
+
+.{class}--mobile{
+  .{class}-wrapper {
+    display none;
+  }
+}

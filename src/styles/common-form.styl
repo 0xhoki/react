@@ -1,0 +1,102 @@
+class = common-form
+
+.{class} {
+  padding: 55px 45px;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  border-radius 4px;
+  margin-bottom 50px;
+
+  &__group {
+    display: block;
+    width 100%;
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    color: #252963;
+    width 100%;
+    font-weight bold;
+    font-size 18px;
+  }
+
+  &__input {
+    width 100%;
+    color: #616161!important;
+    font-weight normal;
+    border: none;
+    border-bottom 2px solid #aeb0b7;
+    max-width: 100%;
+
+    &:focus{
+      outline none;
+    }
+
+    &--has-error {
+      border-bottom 2px solid red;
+    }
+  }
+
+  input[type='radio'].{class}__radio {
+    margin: 0;
+    margin-right: 8px;
+    color: #9b9b9b;
+  }
+
+  &__radio-label {
+    color: #616161;
+    font-weight normal;
+    display: inline-block;
+    vertical-align middle;
+    margin: 0;
+    margin-right: 32px;
+    &:before {
+      display inline-block;
+      vertical-align middle;
+      height: 100%;
+      content: ""
+      width: 0
+    }
+  }
+
+  &__error {
+    color: red;
+    font-size 12px;
+  }
+
+  &__submit{
+    width: 156px;
+    height: 50px;
+    border-radius: 4px;
+    font-weight bold;
+    font-size: 18px;
+    color: #4978ff;
+    border: 1px solid #4978ff;
+    margin: 60px auto;
+    text-align center;
+    user-select: none;
+    cursor pointer;
+    &:before {
+      display inline-block;
+      vertical-align middle;
+      height: 100%;
+      content: ""
+      width: 0
+    }
+  }
+}
+
+.{class}--mobile {
+  border: none;
+  padding: 10px 0;
+
+  .{class}__input {
+    border: none;
+  }
+
+  .{class}__submit{
+    width: 127px;
+    height: 40px;
+    font-size 16px;
+  }
+}

@@ -1,0 +1,63 @@
+class = profile-layout
+
+$menu-width = 225px;
+$transition-time = 200ms;
+$shift-init(){
+  margin-left: 0;
+  transition: margin-left $transition-time linear, width $transition-time linear;
+  width 100%;
+}
+
+.{class} {
+  width: 100%;
+  overflow hidden;
+  min-width: 1054px;
+
+  &__header {
+    $shift-init()
+  }
+  &__body {
+    $shift-init()
+  }
+  &__footer {
+    $shift-init()
+  }
+
+  &__vertical-menu {
+    position: fixed;
+    top: 0;
+    left: -($menu-width + 1px); //1px - for border
+    height: 100%;
+    width: $menu-width;
+    overflow: hidden;
+    transition left $transition-time linear;
+  }
+
+  &--mobile {
+    min-width initial;
+  }
+
+  &--open-menu {
+    min-width: "calc(100% + %s)" % ($menu-width)
+
+    .{class}__header {
+      margin-left: $menu-width;
+      width: "calc(100% + %s)" % $menu-width;
+    }
+
+    .{class}__body {
+      margin-left: $menu-width;
+      width: "calc(100% + %s)" % $menu-width;
+    }
+
+    .{class}__footer {
+      margin-left: $menu-width;
+      width: "calc(100% + %s)" % $menu-width;
+    }
+
+    .{class}__vertical-menu {
+      left: 0;
+      width: 100%;
+    }
+  }
+}

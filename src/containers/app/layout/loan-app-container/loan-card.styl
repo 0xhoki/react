@@ -1,0 +1,83 @@
+class = loan-card
+
+.{class} {
+  padding: 24px;
+  margin-bottom 16px;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+  display: table;
+  width 100%;
+
+  &__check-cell {
+    display table-cell;
+    vertical-align middle;
+    color: #ba2424;
+    font-size 22px;
+    width 36px;
+    text-align center;
+    padding-right: 24px;
+
+    &:before {
+      content: "\f00d";
+      font: normal normal normal 16px / 1 FontAwesome;
+      font-size inherit;
+    }
+  }
+
+  &__caption {
+    display table-cell;
+    vertical-align middle;
+    font-size 22px;
+    color: #4978ff;
+    font-weight bold;
+  }
+
+  &__complete {
+    display table-cell;
+    vertical-align middle;
+    color: #ba2424;
+    width 200px;
+    text-align center;
+  }
+
+  &__view-details {
+    display table-cell;
+    vertical-align middle;
+    width 200px;
+    text-align: center;
+  }
+
+  &--success {
+    .{class}__check-cell {
+      color: #52a13d;
+      font-size 24px;
+      &:before{
+        content: "\f046";
+      }
+    }
+    .{class}__complete {
+      color: #52a13d;
+    }
+  }
+
+  &--mobile {
+    .{class}__caption{
+      display inline-block;
+      text-align left;
+      font-size: 20px;
+      width 100%;
+    }
+    .{class}__complete{
+      display inline-block;
+      text-align left;
+      font-size: 14px;
+      width: 100%;
+    }
+    .{class}__view-details{
+      display inline-block;
+      text-align left;
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}

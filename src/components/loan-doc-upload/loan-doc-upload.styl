@@ -1,0 +1,79 @@
+class = loan-doc-upload
+
+.{class} {
+  &__container {
+    display table;
+    width: 100%;
+  }
+
+  &__col {
+    display table-cell;
+  }
+
+  &__btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 3px;
+    border: 1px solid #979797;
+    text-align center;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #5e626f;
+    position relative;
+
+    &:before {
+      font: normal normal normal 24px / 1 FontAwesome;
+      content: "\f093";
+      height 70px;
+      width 100%;
+      display: block;
+      padding: 32px 0 10px 0;
+    }
+  }
+
+  &__label {
+    height 50px;
+  }
+
+  &--uploaded {
+    .{class}__btn {
+      &:before {
+        content: "\f046";
+        color: #52a13d;
+      }
+    }
+  }
+
+  &--mobile {
+    .{class}__container {
+      display: block;
+    }
+    .{class}__btn {
+      width: 100%;
+      margin-bottom: 16px;
+      height: 74px;
+      text-align left;
+      padding: 16px;
+
+      &:before {
+        width: auto;
+        display: inline-block;
+        margin-right 16px;
+        padding: 0;
+        vertical-align: middle;
+        height: auto;
+      }
+      &:after {
+        content: '';
+        display inline-block;
+        height 100%;
+        vertical-align middle;
+        width 0;
+      }
+    }
+    .{class}__col {
+      display: block;
+      width: 100%;
+    }
+  }
+}

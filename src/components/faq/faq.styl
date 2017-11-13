@@ -1,0 +1,33 @@
+class = faq
+
+.{class} {
+  .nav-tabs > li > a {
+    color: #232762
+  }
+  .nav-tabs > li.active > a {
+    color: #555;
+  }
+  .panel-default{
+    border: none;
+  }
+  .panel-default > .panel-heading {
+    border: 0;
+    border-bottom: 2px solid #4978ff;
+    font-size: 18px;
+    font-weight: 700;
+    background-color white;
+  }
+  .panel-default > .panel-heading > h4 > a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #232762;
+
+    &:before {
+      float: right !important;
+      content: "\F0FE";
+      color: #4978ff;
+      font-family: FontAwesome;
+    }
+  }
+
+}
